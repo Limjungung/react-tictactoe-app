@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+React Study by Tom
+
+Date : 2024. 2. 12 ~ 2. 15.
+
+IDE : **_Jetbrain Webstorm_**
+
 ## Available Scripts
 
 In the project directory, you can run:
