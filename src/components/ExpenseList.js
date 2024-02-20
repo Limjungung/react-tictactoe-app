@@ -1,22 +1,24 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+import React from 'react'
 import './ExpenseList.css';
+
 import ExpenseItem from './ExpenseItem';
 import { MdDelete } from "react-icons/md";
 
-export class ExpenseList extends Component {
-  render() {
+// export class ExpenseList extends Component {
+const ExpenseList = (props) => {
     // console.log(this.props.initialExpenses)
     return (
       <React.Fragment>
         <ul className='list'>
             {/* Expense List*/}
             {/* <ExpenseItem /> */}
-            {this.props.initialExpenses.map(expense => {
+            {props.initialExpenses.map(expense => {
                 return (
                     <ExpenseItem 
                     expense={expense}
                     key={expense.id}
-                    handleDelete={this.props.handleDelete}
+                    handleDelete={props.handleDelete}
                     />
                 )
             })}
@@ -27,7 +29,6 @@ export class ExpenseList extends Component {
         </button>
       </React.Fragment>
     )
-  }
 }
 
 export default ExpenseList

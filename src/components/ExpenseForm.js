@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+import React from 'react'
 import './ExpenseForm.css';
+
 import { IoIosSend } from "react-icons/io";
 
-export class ExpenseForm extends Component {
-  render() {
+// Class형 : export class ExpenseForm extends Component {
+const ExpenseForm = ({handleCharge, charge, handleAmount, amount, handleSubmit}) => {
     return (
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='form-center'>
             <div className='form-group'>
                 <label htmlFor='charge'>
@@ -16,8 +18,10 @@ export class ExpenseForm extends Component {
                     className='form-control'
                     id='charge'
                     name='charge'
+                    value={charge}
                     placeholder="예) 렌트비"
-                    >
+                    onChange={handleCharge}
+                >
                 </input>
             </div>
             <div className='form-group'>
@@ -29,8 +33,10 @@ export class ExpenseForm extends Component {
                     className='form-control'
                     id='amount'
                     name='amount'
+                    value={amount}
                     placeholder="예) 100"
-                    >
+                    onChange={handleAmount}
+                >
                 </input>
             </div>
         </div>
@@ -40,7 +46,6 @@ export class ExpenseForm extends Component {
         </button>
       </form>
     )
-  }
 }
 
 export default ExpenseForm
