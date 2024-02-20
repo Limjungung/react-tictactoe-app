@@ -5,7 +5,7 @@ import './ExpenseForm.css';
 import { IoIosSend } from "react-icons/io";
 
 // Class형 : export class ExpenseForm extends Component {
-const ExpenseForm = ({handleCharge, charge, handleAmount, amount, handleSubmit}) => {
+const ExpenseForm = ({handleCharge, charge, edit, handleAmount, amount, handleSubmit}) => {
     return (
       <form onSubmit={handleSubmit}>
         <div className='form-center'>
@@ -41,7 +41,7 @@ const ExpenseForm = ({handleCharge, charge, handleAmount, amount, handleSubmit})
             </div>
         </div>
         <button type='submit' className='btn'>
-            제출
+            {edit ? "수정" : "제출"}
             <IoIosSend className='btn-icon'/>
         </button>
       </form>
